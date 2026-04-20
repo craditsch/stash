@@ -29,3 +29,8 @@ describe "html_to_markdown"
   fixture=$(cat "$FIXTURES_PATH/apple_notes_sample.html")
   approve "echo \"\$fixture\" | html_to_markdown" "html_to_markdown_apple_notes_sample"
   unset fixture
+  
+  # Test 6: Apple Notes heading styles (H1=24px, H2=18px, H3=bold)
+  fixture=$(cat "$FIXTURES_PATH/apple_notes_headings.html")
+  approve "echo \"\$fixture\" | html_to_markdown" "html_to_markdown_apple_notes_headings"
+  unset fixture
